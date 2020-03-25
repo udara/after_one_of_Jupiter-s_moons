@@ -2,16 +2,18 @@
 
 
 Project title
-Park finder
+carpark finder
 
 Project description
   A UI that lists vacant parking spots within
-  adelaide and shows in order what ones are closest
+  adelaide and shows in order what ones are closest, type of parking space and price
 
 User story
-  oh no, I am in adelaide and I can't find a park!
-  if only there as an app that could list the vacant
-  parking spots and shows what ones are closest.
+   Given I need a carpark when I arrive in a new location
+   I want to know where I could park my car.
+   When I open the App, I can type in the postcode/location
+   Then I will be shown parking spot available in the immediate area
+      the type of parking & pricing for the park
 
 Wireframe or sketch of the design
 
