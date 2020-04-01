@@ -13,6 +13,8 @@ function success(pos){
     lat = pos.coords.latitude;
     lon = pos.coords.longitude;
     console.log("Latitude = " + lat + " " + "Longitude = " + lon);
+    $('#lat').text(lat);
+    $('#lon').text(lon);
     info(lat,lon);
   }
   
@@ -36,7 +38,7 @@ function error(error){
 
 function info(lat, lon){
 
-    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+apikey;
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&units=metric&appid='+apikey;
     $.ajax({
           url: queryURL,
           method: "GET",
@@ -44,7 +46,8 @@ function info(lat, lon){
             var result = response;
 
             console.log(result)
-                   
+            $('#temp').text(result.main.temp)
+            $('#wspd').text(result.wind.speed)       
           },
           error: function(){
             var msg = "City Not found";

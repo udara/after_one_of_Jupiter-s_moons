@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Golf App</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -16,11 +16,44 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-
+  <link rel="stylesheet" href="style.css">
 
 </head>
+<body>
 
-<!-- Optional JavaScript -->
+  <div class="flex mb-4">
+    <div class="w-1/2 h-12">
+      <div class="container mx-auto my-3 border border-solid border-9 border-black-800 rounded">
+        <h3 class="text-2xl px-2">Current Positon</h3>
+        <h4 class="px-2">Latitude: <span id="lat"></span></h4>
+        <h4 class="px-2">Longtitude: <spanid id="lon"></span></h4>
+      </div>
+    </div>
+    <div class="w-1/2 h-12">
+      <div class="container mx-auto my-3 border border-solid border-9 border-black-800 rounded">
+        <h3 class="text-2xl px-2">Weather Condition</h3>
+        <h4 class="px-2">Temp: <span id="temp"></span> °C</h4>
+        <h4 class="px-2">Wind Speed: <span id="wspd"></span> m/s</h4>
+      </div>
+    
+    
+    
+    </div>
+  </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     
@@ -29,5 +62,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
+
 </body>
+
 </html>
