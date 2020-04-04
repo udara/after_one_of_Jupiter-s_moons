@@ -21,15 +21,46 @@
 </head>
 <body>
 
-  <div class="flex mb-4">
-    <div class="w-1/2 h-12">
+
+
+
+<nav class="flex items-center justify-between flex-wrap bg-green-700 p-6">
+  <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <span class="text-2xl text-white tracking-widest pr-2 font-bold">Golf App</span>
+    <i class="fa fa-golf-ball fa-2x text-white"></i>
+  </div>
+  <div class="block lg:hidden">
+    <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+    </button>
+  </div>
+  <div class="ml-10 w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="text-base lg:flex-grow">
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Score Card
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Map
+      </a>
+      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+        Compass
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+
+  <div class="flex">
+    <div class="w-full sm:w-1/2 h-12">
       <div class="container mx-auto my-3 border border-solid border-9 border-black-800 rounded">
         <h3 class="text-2xl px-2">Current Positon</h3>
         <h4 class="px-2">Latitude: <span id="lat"></span></h4>
         <h4 class="px-2">Longtitude: <spanid id="lon"></span></h4>
       </div>
     </div>
-    <div class="w-1/2 h-12">
+    <div class="w-full sm:w-1/2 h-12">
       <div class="container mx-auto my-3 border border-solid border-9 border-black-800 rounded">
         <h3 class="text-2xl px-2">Weather Condition</h3>
         <h4 class="px-2">Temp: <span id="temp"></span> °C</h4>
@@ -43,7 +74,7 @@
 
 
 
-  </div>
+  
 
 
 
