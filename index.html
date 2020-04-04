@@ -1,122 +1,67 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
     <title>Golf App</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
   </head>
-  <body><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#"><p>GOLF APP</p></a>
-    <div class="wrapper"> 
-            <span id="hole number">hole 1</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 10</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-          <div class="wrapper"> 
-            <span id="hole number">hole 2</span>          
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 11</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-          
-          
-          <div class="wrapper"> 
-            <span id="hole number">hole 3</span>           
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 12</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-            
-          <div class="wrapper">  
-            <span id="hole number">hole 4</span>        
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 13</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-          <div class="wrapper"> 
-            <span id="hole number">hole 5</span>          
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 14</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-          <div class="wrapper">   
-            <span id="hole number">hole 6</span>        
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 15</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-          <div class="wrapper">  
-            <span id="hole number">hole 7</span>         
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 16</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-          
-          
-          <div class="wrapper">   
-            <span id="hole number">hole 8</span>    
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <span id="hole number">hole 17</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-            
-          <div class="wrapper"> 
-            <span id="hole number">hole 9</span>         
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-
-            <span id="hole number">hole 18</span>
-            <button id="counter">0</button>
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-          </div>
-          
-          
-          <img src="https://static.vecteezy.com/system/resources/previews/000/190/860/original/golf-course-map-vector.jpg" alt="golf course" width="400" height="500">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-          
-
-          </style>
-        </body>
+  <body>
+    <div id="scorecard">Score Card</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function drawScorecard() {
+        for (let i = 1; i < 18; i++) {
+          var hole = `<div class="hole container">
+                    <div class="hole" id="hole_${i}"> 0 </div>
+                    <button class="btn_score" data-hole="${i}" date-button-type="below-par"> - </button>
+                    <button class="btn_score" data-hole="${i}" date-button-type="above-par"> + </button>
+                    </div>
+                    `;
+          $("#scorecard").append(hole);
+        }
+      }
+      drawScorecard();
+      $(".btn_score").on("click", function() {
+        var current_score = parseInt(
+          $(`#hole_${$(this).attr("data-hole")}`).text()
+        );
+        var button_command = $(this).attr("date-button-type");
+        console.log($(this).attr("date-button-type"));
+        if (button_command == "below-par") {
+          current_score--;
+        } else {
+          current_score++;
+        }
+        $(`#hole_${$(this).attr("data-hole")}`).text(current_score);
+        console.log(current_score);
+      });
+    </script>
+  </body>
 </html>
-=======
-
->>>>>>> 87529a79883c4cd391d459162c89171353890340
