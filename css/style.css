@@ -1,0 +1,17 @@
+body
+{
+    background-color: green;
+    color: white;
+}
+.selected-hole{
+    border-bottom: 1px greenyellow solid;
+}
+
+.hole_number {
+    border: 1px green solid;
+    border-radius:50%;
+    text-align: center;
+    padding: 2%;
+    background-color: white;
+    color: black;
+}
