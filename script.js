@@ -18,6 +18,7 @@ function success(pos){
     $('#lat').text(lat);
     $('#lon').text(lon);
     info(lat,lon);
+
   }
   
 function error(error){
@@ -37,7 +38,6 @@ function error(error){
     }
   }
 
-  //Weather
 
 function info(lat, lon){
 
@@ -60,7 +60,8 @@ function info(lat, lon){
 })
 }
 
-//Matt's - Map marking; output = #map
+
+//Matt's - Map marking
 
 console.log("test");
 
@@ -97,6 +98,20 @@ function initMap() {
     });
     }
 };
+//ammended scorecard function//
+
+
+
+
+
+
+
+
+
+
+//
+
+
 
 //Udara & Damian - Scoring card
 
@@ -222,6 +237,7 @@ $('#next-hole').on('click', function() {
 
 
 //Andy's - Compass
+
 
 var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   
