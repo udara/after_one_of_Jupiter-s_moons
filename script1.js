@@ -58,38 +58,56 @@ function info(lat, lon){
 
 })
 }
+
 $(document).ready(function(){
+r = 0
+    localscore();
+    $('.startbtn').on('click',function(){
+        nexthole(0);
+    })
+    $('body').on('click','.nxtbtn',function(){
+        
+        var q = $(this).siblings('.holen').text();
+        console.log(q);
 
-    $('body').on('click','.nxtbtn',function(){nexthole()})
- 
-
+        var t = $(this).siblings('.score').text();
+        console.log(t)
+        nexthole(parseInt(q));
+        endhole(q,t);
+        $(this).prop('disabled', true)
+    
+    })
+    $('body').on('click','.plsbtn',function(){
+        var r = parseInt($(this).prev().text())
+        r++;
+        $(this).prev().text(r)
+    })
+    $('body').on('click','.msbtn',function(){
+        var s = parseInt($(this).next().text())
+        s--;
+        $(this).next().text(s);
+    })
 
 })
 
-
-
-
-//Score care
 
 var scorecard = [
     {hole: "", total: ""}
 ];
 
-var usersch = JSON.parse(localStorage.getItem("userscore"))
-if(usersch==null){usersch=scorecard};
+var usersc = JSON.parse(localStorage.getItem("userscore")) || [];
 
 
-
-i = 1
-function nexthole(){
-    var btnclass = 'text-center w-full text-white font-bold py-2 px-4 rounded';
+function nexthole(i){
+    var btnclass = 'container w-1/6 text-center text-white font-bold py-2 px-4 rounded';
     var entryrow = $('<div class="flex mb-2"'+ "id="+i+">");
-    var hole = $('<div class="container text-center w-1/6">').text(i++);
-    var minusbtn = $('<div class="container w-1/6"><button class="bg-red-500 '+btnclass+'">-</button>');
-    var score = $('<div class="container w-1/6 text-center bg-grey-500 score">').text(0);
-    var plusbtn = $('<div class="container w-1/6"><button class="bg-green-500 plsbtn '+btnclass+'">+</button>');
+    var hole = $('<div class="container text-center w-1/6 holen">').text(i+1);
+    var minusbtn = $('<button class="bg-red-500 msbtn '+btnclass+'">-</button>');
+    var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(i)+'>').text(0);
+    var plusbtn = $('<button class="bg-green-500 plsbtn '+btnclass+'">+</button>');
     var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
-    var nxtbtn = $('<div class="container w-1/6"><button class="bg-blue-500 nxtbtn '+btnclass+'">Next</button>');
+    var nxtbtn = $('<button class="bg-blue-500 nxtbtn '+btnclass+'">Next</button>');
+
 
     $('#start').append(entryrow);
     entryrow.append(hole);
@@ -98,5 +116,44 @@ function nexthole(){
     entryrow.append(plusbtn);
     entryrow.append(total);
     entryrow.append(nxtbtn);
+}
+
+
+function endhole(holenum,score){
+
+    const holescore = {
+        hlnum: holenum,
+        hlscore: score
+    }
+    var pos = usersc.map(function(e) { return e.hlnum; }).indexOf(holenum);
+    console.log(pos);
+    if(pos==-1){usersc.push(holescore)};
+    
+    console.log(usersc);
+    localStorage.setItem("userscore",JSON.stringify(usersc));
+}
+
+function localscore(){
+    var btnclass = 'container w-1/6 text-center text-white font-bold py-2 px-4 rounded';
+    for(l=0;l<usersc.length;l++){
+        var entryrow = $('<div class="flex mb-2"'+ "id="+l+">");
+        var hole = $('<div class="container text-center w-1/6 holen">').text(usersc[l].hlnum);
+        var minusbtn = $('<button class="bg-red-500 msbtn '+btnclass+'" disabled>-</button>');
+        var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(l)+'>').text(usersc[l].hlscore);
+        var plusbtn = $('<button class="bg-green-500 plsbtn '+btnclass+'" disabled>+</button>');
+        var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
+        var nxtbtn = $('<button class="bg-blue-500 nxtbtn '+btnclass+'" disabled>Next</button>');
+        $('#start').append(entryrow);
+        entryrow.append(hole);
+        entryrow.append(minusbtn);
+        entryrow.append(score);
+        entryrow.append(plusbtn);
+        entryrow.append(total);
+        entryrow.append(nxtbtn);
+
+    }
+
+    $('#start .flex .nxtbtn').last().removeAttr('disabled')
+
 }
 
