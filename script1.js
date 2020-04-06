@@ -77,7 +77,15 @@ r = 0
         console.log(q);
         var t = $(this).siblings('.score').text();
         if(q==18){alert('Game Over');
-            endhole(q,t)}else{
+            endhole(q,t);
+            $(this).prop('disabled', true)
+            $(this).removeClass('bg-blue-500');
+            $(this).addClass('bg-blue-200');
+            $(this).siblings('.plsbtn').prop('disabled',true);
+            $(this).siblings('.plsbtn').addClass('bg-green-200').removeClass('bg-green-500');
+            $(this).siblings('.msbtn').prop('disabled',true);
+            $(this).siblings('.msbtn').addClass('bg-red-200').removeClass('bg-red-500');
+          }else{
             console.log(t)
             nexthole(parseInt(q));
             endhole(q,t);
