@@ -16,7 +16,11 @@ function success(pos){
     console.log("Latitude = " + lat + " " + "Longitude = " + lon);
     $('#lat').text(lat);
     $('#lon').text(lon);
-    info(lat,lon);
+    latn = parseFloat(lat);
+    lonn = parseFloat(lon);
+    console.log(latn, lonn)
+    info(latn,lonn);
+    initMap(latn,lonn);
 
   }
   
@@ -80,6 +84,11 @@ r = 0
             $(this).prop('disabled', true)
             $(this).removeClass('bg-blue-500');
             $(this).addClass('bg-blue-200');
+            $(this).siblings('.plsbtn').prop('disabled',true);
+            $(this).siblings('.plsbtn').addClass('bg-green-200').removeClass('bg-green-500');
+            $(this).siblings('.msbtn').prop('disabled',true);
+            $(this).siblings('.msbtn').addClass('bg-red-200').removeClass('bg-red-500');
+            //$(this).parent().addClass('hidden')
             
 
         }
@@ -118,7 +127,7 @@ function nexthole(i){
     var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(i)+'>').text(0);
     var plusbtn = $('<button class="bg-green-500 plsbtn '+btnclass+'">+</button>');
     //var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
-    var nxtbtn = $('<button class="bg-blue-500 mx-2 nxtbtn '+btnclass+'">Next</button>');
+    var nxtbtn = $('<button class="bg-blue-500 mx-auto lg:mx-2 nxtbtn '+btnclass+'">Next</button>');
 
 
     $('#start').append(entryrow);
@@ -154,7 +163,7 @@ function localscore(){
         var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(l)+'>').text(usersc[l].hlscore);
         var plusbtn = $('<button class="bg-green-200 plsbtn '+btnclass+'" disabled>+</button>');
         //var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
-        var nxtbtn = $('<button class="bg-blue-200 mx-2 nxtbtn '+btnclass+'" disabled>Next</button>');
+        var nxtbtn = $('<button class="bg-blue-200 mx-auto lg:mx-2 nxtbtn '+btnclass+'" disabled>Next</button>');
         $('#start').append(entryrow);
         entryrow.append(hole);
         entryrow.append(minusbtn);
@@ -184,4 +193,13 @@ function reset(){
     usersc=[];
     $('#htotal').text(0);
     $('#start').html("");
+}
+function initMap(latt, lon) {
+  // The location of Uluru
+  var location = {lat: latt, lng: lon};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 17, center: location, mapTypeId: 'satellite'});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: location, map: map});
 }

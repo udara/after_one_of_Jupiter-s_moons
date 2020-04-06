@@ -18,7 +18,13 @@
     />
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <!--<link rel="stylesheet" href="style.css">-->
-
+  <style>
+    /* Set the size of the div element that contains the map */
+   #map {
+     height: 400px;  /* The height is 400 pixels */
+     width: 100%;  /* The width is the width of the web page */
+    }
+ </style>
 </head>
 <body>
 
@@ -91,7 +97,7 @@ Add Stroke
 <!--<div class="container w-1/6 bg-green-700 text-white text-center py-2" id="htotal">
   Total
   </div>-->
-  <div class="container w-1/6">
+  <div class="container w-2/6 lg:w-1/6">
     <button class="startbtn text-center w-full bg-blue-500 text-white font-bold py-2 px-4 mx-2 rounded">
       Start Or Reset
     </button>
@@ -101,20 +107,7 @@ Add Stroke
 
 <div id="start"></div>
 
-
-
-
-
-    
-
-
-
-  
-
-
-
-
-
+<div id="map"></div>
 
 
 
@@ -127,7 +120,9 @@ Add Stroke
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script1.js"></script>
-
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-8zSdr3WI2rZ9CaoUa1kM8djr8M2Y8U&callback=initMap">
+    </script>
 
     
 
