@@ -200,6 +200,23 @@ button,
   -webkit-appearance: button;
 }
 
+.arrowimage{
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    
+}
+
+#but{
+    font-size: small;
+}
+.compassheading{
+    text-align: center;
+}
+
+.compassdisplay{
+    margin: 30px;
+}
 /**
  * Remove the inner border and padding in Firefox.
  */
