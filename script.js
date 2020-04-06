@@ -237,8 +237,8 @@ $('#next-hole').on('click', function() {
 
 //Andy's - Compass
 
-var displaycompass = function(windDirection){
-
+var displaycompass = function(){
+  
   var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   if (iOS === true){
 
