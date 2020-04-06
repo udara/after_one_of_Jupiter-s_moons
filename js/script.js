@@ -51,7 +51,7 @@ function info(lat, lon){
             console.log(result)
             $('#temp').text(result.main.temp)
             $('#wspd').text(result.wind.speed)    
-            $('#forcast').text(result.weather[0].description)  
+            $('#forcast').text(result.wind.speed)  
           },
           error: function(){
             var msg = "City Not found";
