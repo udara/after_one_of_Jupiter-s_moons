@@ -47,12 +47,14 @@
   </div>
   <div class="lg:ml-10 w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-base lg:flex-grow">
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+      <a href="./index.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+        Home
+      </a>
+
+      <a href="./scorecard.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
         Score Card
       </a>
-      <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Map
-      </a>
+
       <a href="./compass.html" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
         Compass
       </a>
@@ -63,14 +65,14 @@
 
 <div class="flex mb-4">
 
-  <div class="container w-1/2 lg:w-1/4">
+  <div class="container mt-2 w-1/2 border-solid border-4 border-green-500 lg:w-1/4">
     <h3 class="text-2xl px-2">Current Positon</h3>
     <h4 class="px-2">Latitude: <span id="lat"></span></h4>
     <h4 class="px-2">Longtitude: <spanid id="lon"></span></h4>
   
   </div>
   
-  <div class="container w-1/2 lg:w-3/4">
+  <div class="container mt-2 ml-2 w-1/2 border-solid border-4 border-green-500 lg:w-3/4">
     <h3 class="text-2xl px-2">Weather Condition</h3>
     <h4 class="px-2">Temp: <span id="temp"></span> °C</h4>
     <h4 class="px-2">Wind Speed: <span id="wspd"></span> m/s</h4>
@@ -81,39 +83,23 @@
 
 </div>
 
-<div class="container pl-2">
-<h4>Score Card</h4>
-<div class="text-2xl">Total Score: <span id="htotal"></span></div>
-<div class="flex sticky top-0 mb-2">
-<div class="container w-1/6 bg-green-700 text-white text-center py-2">
-Hole No.
-</div>
-<div class="container w-1/6 bg-green-700 text-white text-center py-2">
-Penalties
-</div>
+<div class="flex mb-4">
 
- <div class="container w-1/6 bg-green-700 text-white text-center py-2" id="hscore">
-  Score
- </div>
-
-<div class="container w-1/6 bg-green-700 text-white text-center py-2">
-Add Stroke
-</div>
-
-<!--<div class="container w-1/6 bg-green-700 text-white text-center py-2" id="htotal">
-  Total
-  </div>-->
-  <div class="container w-2/6 lg:w-1/6">
-    <button class="startbtn text-center w-full bg-blue-500 text-white font-bold py-2 px-4 mx-2 rounded">
-      Start Or Reset
-    </button>
+  <div class="container mt-2 w-1/2 border-solid border-4 border-green-500 lg:w-1/4">
+      <h3 class="text-2xl px-2">Compass & Wind</h3>
+    
     </div>
+    
+    <div class="container h-64 mt-2 ml-2 w-1/2 border-solid border-4 border-green-500 lg:w-3/4">
+      <h3 class="text-2xl px-2">Map</h3>
+
 
 </div>
 
-<div id="start"></div>
 
-<div id="map"></div>
+
+</div>
+
 
 
 
