@@ -303,7 +303,8 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
             var rmtext = document.getElementById('windavailable')
           rmtext.innerHTML= windspeed+"m/s";
                var directionarrow = document.getElementById("windarrow");
-  var winddegrees = compassdir - 90 - 360 + windDirection;
+  
+              var winddegrees = windDirection-compassdir-90;
   directionarrow.setAttribute('style','transform:rotate('+ winddegrees +'deg)');
 
           },
