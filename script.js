@@ -286,7 +286,7 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
   var direc = 360 - compassdir 
   var arrowimg = document.getElementById('arrow');
   arrowimg.setAttribute('style','transform:rotate('+ direc +'deg)');
-  console.log(compassdir);
+ 
 
   
   
@@ -298,7 +298,7 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
             var result = response;
             
             var windspeed = (result.wind.speed)
-            var winddegrees = (result.wind.deg)
+            var windDirection = (result.wind.deg)
 
             var rmtext = document.getElementById('windavailable')
           rmtext.innerHTML= windspeed+"m/s";
