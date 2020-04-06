@@ -47,8 +47,6 @@ function info(lat, lon){
           method: "GET",
           success: function(response){
             var result = response;
-
-            console.log(result)
             $('#temp').text(result.main.temp)
             $('#wspd').text(result.wind.speed)
             $('#forcast').text(result.weather[0].main)   
