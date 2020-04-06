@@ -270,8 +270,7 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
 
           var rmtext = document.getElementById('pleasenote')
           rmtext.innerHTML="";
-          var rmtext = document.getElementById('windavailable')
-          rmtext.innerHTML="";
+          
 
 
   
@@ -290,6 +289,23 @@ stackoverflow was used to find the ollowing code to gain access to movement and 
   console.log(compassdir);
 
   
+  
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&units=metric&appid='+apikey;
+    $.ajax({
+          url: queryURL,
+          method: "GET",
+          success: function(response){
+            var result = response;
+            
+            var windspeed = (result.wind.speed)
+            var winddegrees = (result.wind.deg)
+
+            var rmtext = document.getElementById('windavailable')
+          rmtext.innerHTML= windspeed+"m/s";
+          },
+          
+
+})
 
   var directionarrow = document.getElementById("windarrow");
   var winddegrees = compassdir - 90 + windDirection;
