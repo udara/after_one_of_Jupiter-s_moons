@@ -64,7 +64,7 @@ var usersc = JSON.parse(localStorage.getItem("userscore")) || [];
 
 
 function nexthole(i){
-    var btnclass = 'container w-1/6 text-center text-white font-bold py-2 px-4 rounded';
+    var btnclass = 'container w-1/6 text-center text-white font-bold py-2 px-2 rounded';
     var entryrow = $('<div class="flex mb-2"'+ "id="+i+">");
     var hole = $('<div class="container text-center w-1/6 holen">').text(i+1);
     var minusbtn = $('<button class="bg-red-500 msbtn '+btnclass+'">-</button>');

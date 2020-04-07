@@ -1,0 +1,22 @@
+body{
+    background: url(assets/bgscreenshot.png) no-repeat center fixed;
+    background-size: cover;
+}
+.holen, .score, .totalscore{
+    background: rgba(31, 29, 29, 0.5);
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    
+}
+
+.weather, .forecast, .compass, .wind{
+    background: rgba(31, 29, 29, 0.5);
+    color: white;
+    font-size: larger;
+    
+}
+.navbar, #today {
+    background: rgba(255,255,255,0.2);
+    
+}

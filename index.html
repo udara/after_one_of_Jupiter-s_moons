@@ -18,7 +18,7 @@
     />
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-  <!--<link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" href="style.css">
   <style>
     /* Set the size of the div element that contains the map */
    #map {
@@ -63,7 +63,7 @@
 
 <div class="flex mb-4">
 
-  <div class="container mt-2 w-1/2 border-solid border-4 border-blue-500 lg:w-1/4 rounded-lg">
+  <div class="container weather mt-2 w-1/2 lg:w-1/4 rounded-lg">
     <!--<h3 class="text-2xl px-2">Current Positon</h3>
     <h4 class="px-2">Latitude: <span id="lat"></span></h4>
     <h4 class="px-2">Longtitude: <spanid id="lon"></span></h4>-->
@@ -78,7 +78,7 @@
   
   </div>
   
-  <div class="container mt-2 ml-2 w-1/2 border-solid border-4 border-blue-500 lg:w-3/4 rounded-lg">
+  <div class="container mt-2 ml-2 w-1/2 forecast lg:w-3/4 rounded-lg">
     <h3 class="text-2xl px-2">Forecast</h3>
     <div id="forecast"></div>
 
@@ -91,8 +91,8 @@
 
 <div class="flex mb-4">
 
-  <div class="container mt-2 w-1/2 border-solid border-4 border-blue-500">
-      <h3 class="text-2xl px-2 text-center">Compass</h3>
+  <div class="container mt-2 w-1/2 compass">
+      <h3 class="text-xl px-2 text-center">Compass</h3>
       
         <div class="container flex justify-center">
           <div class = "text-center compassdisplay">
@@ -105,8 +105,8 @@
 
       </div>
 
-        <div class="container mt-2 ml-2 w-1/2 border-solid border-4 border-blue-500">
-          <h3 class="text-2xl text-center">Wind Direction</h3>
+        <div class="container mt-2 ml-2 w-1/2 wind">
+          <h3 class="text-xl text-center">Wind Direction</h3>
           <div class="container flex justify-center">
             <div class = "text-center compassdisplay">
               <img id="windarrow" class ="arrowimage" src="./assets/wind.png">
@@ -124,8 +124,8 @@
 </div>
 <div class="flex">
   <div class="container mt-2 border-solid border-4 border-green-500">
-    <h3 class="text-2xl px-2">Map</h3>
-    <div id="map"></div>
+    
+    <div id="map" style="width: 100%; height: 60vh;"></div>
   </div>
 
 </div>
@@ -144,23 +144,13 @@
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-8zSdr3WI2rZ9CaoUa1kM8djr8M2Y8U&callback=initMap">
-    </script>
-
-    
-
-
-
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-8zSdr3WI2rZ9CaoUa1kM8djr8M2Y8U"></script>
 
     <script src="script.js"></script>
 
