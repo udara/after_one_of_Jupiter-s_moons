@@ -87,7 +87,7 @@ function displayforecast(obj){
     var dateString = moment.unix(fdate).format('ddd, hh:mm');
     var ftemp = Math.round(obj.list[frarr].main.temp);
     var ficon = obj.list[frarr].weather[0].icon;
-    var ficonurl = 'http://openweathermap.org/img/wn/'+ficon+'.png';
+    var ficonurl = 'https://openweathermap.org/img/wn/'+ficon+'.png';
     var fhumid = obj.list[frarr].main.humidity;
     var fblock = $('<div class="inline-block m-2">');
     var finfo = $('<div class="p-2">').text(dateString);
@@ -319,7 +319,7 @@ function renderCourseMap(userpos) {
         });
 
         markers[i] = new google.maps.Marker({position: eval('course_data.hole_'+i+'.cordinates'), 
-        map: map, icon: 'http://maps.google.com/mapfiles/kml/pal2/icon13.png'});
+        map: map, icon: 'https://maps.google.com/mapfiles/kml/pal2/icon13.png'});
 
         markers[i].addListener('click', function() {
           infowindow[i].open(map, markers[i]);
@@ -328,7 +328,7 @@ function renderCourseMap(userpos) {
 
         
         new google.maps.Marker({position: user_loc, map: map, 
-        icon: 'http://maps.google.com/mapfiles/kml/shapes/golf.png'});
+        icon: 'https://maps.google.com/mapfiles/kml/shapes/golf.png'});
 
     } // for (let i = 1; i < 3; i++)
 
