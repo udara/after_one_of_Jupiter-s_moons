@@ -64,14 +64,14 @@ var usersc = JSON.parse(localStorage.getItem("userscore")) || [];
 
 
 function nexthole(i){
-    var btnclass = 'container w-1/6 text-center text-white font-bold py-2 px-4 rounded';
-    var entryrow = $('<div class="flex mb-2"'+ "id="+i+">");
-    var hole = $('<div class="container text-center w-1/6 holen">').text(i+1);
+    var btnclass = 'container w-1/5 text-center text-white font-bold py-2 px-2 rounded';
+    var entryrow = $('<div class="container flex flex-wrap mx-auto my-2"'+ "id="+i+">");
+    var hole = $('<div class="text-center w-1/5 holen">').text(i+1);
     var minusbtn = $('<button class="bg-red-500 msbtn '+btnclass+'">-</button>');
-    var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(i)+'>').text(0);
+    var score = $('<div class="w-1/5 text-center bg-grey-500 score" data='+(i)+'>').text(0);
     var plusbtn = $('<button class="bg-green-500 plsbtn '+btnclass+'">+</button>');
     //var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
-    var nxtbtn = $('<button class="bg-blue-500 mx-auto lg:mx-2 nxtbtn '+btnclass+'">Next</button>');
+    var nxtbtn = $('<button class="bg-blue-500 nxtbtn '+btnclass+' w-1/6 mx-auto">Next</button>');
 
 
     $('#start').append(entryrow);
@@ -99,15 +99,15 @@ function endhole(holenum,score){
 }
 
 function localscore(){
-    var btnclass = 'container w-1/6 text-center text-white font-bold py-2 px-4 rounded';
+    var btnclass = 'container w-1/5 text-center text-white font-bold py-2 px-4 rounded';
     for(l=0;l<usersc.length;l++){
-        var entryrow = $('<div class="flex mb-2"'+ "id="+l+">");
-        var hole = $('<div class="container text-center w-1/6 holen">').text(usersc[l].hlnum);
+        var entryrow = $('<div class="container flex flex-wrap mx-auto my-2"'+ "id="+l+">");
+        var hole = $('<div class="text-center w-1/5 holen">').text(usersc[l].hlnum);
         var minusbtn = $('<button class="bg-red-200 msbtn '+btnclass+'" disabled>-</button>');
-        var score = $('<div class="container w-1/6 text-center bg-grey-500 score" data='+(l)+'>').text(usersc[l].hlscore);
+        var score = $('<div class="w-1/5 text-center bg-grey-500 score" data='+(l)+'>').text(usersc[l].hlscore);
         var plusbtn = $('<button class="bg-green-200 plsbtn '+btnclass+'" disabled>+</button>');
         //var total = $('<div class="container w-1/6 text-center bg-grey-500">').text('total');
-        var nxtbtn = $('<button class="bg-blue-200 mx-auto lg:mx-2 nxtbtn '+btnclass+'" disabled>Next</button>');
+        var nxtbtn = $('<button class="bg-blue-200 nxtbtn '+btnclass+' w-1/6 mx-auto" disabled>Next</button>');
         $('#start').append(entryrow);
         entryrow.append(hole);
         entryrow.append(minusbtn);

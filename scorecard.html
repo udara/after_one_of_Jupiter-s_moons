@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <!--<link rel="stylesheet" href="style.css">-->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -51,9 +51,21 @@
   </div>
 </nav>
 
-<div class="container pl-2">
-    <h4>Score Card</h4>
-    <div class="text-2xl">Total Score: <span id="htotal"></span></div>
+<div class="container sticky top-0 flex flex-wrap mx-auto my-2">
+
+  <div class="w-1/5 text-center bg-green-700 text-white py-2">Hole</div>
+  <div class="w-1/5 text-center bg-green-700 text-white py-2">Penalty</div>
+  <div class="w-1/5 text-center bg-green-700 text-white py-2">Score</div>
+  <div class="w-1/5 text-center bg-green-700 text-white py-2">Stroke</div>
+  <div class="w-1/5">
+    <button class="w-full startbtn text-center bg-blue-500 text-white font-bold py-2 px-4 ml-1 rounded">Start or Reset</button>
+  </div>
+  
+  
+</div>
+
+<!-- <div class="container mt-2 pl-2">
+  
     <div class="flex sticky top-0 mb-2">
     <div class="container w-1/6 bg-green-700 text-white text-center py-2">
     Hole
@@ -70,9 +82,6 @@
     Stroke
     </div>
     
-    <!--<div class="container w-1/6 bg-green-700 text-white text-center py-2" id="htotal">
-      Total
-      </div>-->
       <div class="container w-2/6 lg:w-1/6">
         <button class="startbtn text-center w-full bg-blue-500 text-white font-bold py-2 px-4 mx-2 rounded">
           Start Or Reset
@@ -81,7 +90,13 @@
     
     </div>
     
+</div> -->
     <div id="start"></div>
+    <div class="flex totalscore flex-wrap mx-auto mb-20">
+      <div class="mx-auto px-4 my-2 ">Total Score: <span id="htotal"></span></div>
+
+    </div>
+    
 
       <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
